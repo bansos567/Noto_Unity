@@ -18,6 +18,7 @@ import com.unity3d.ads.UnityAdsShowOptions;
     nonVisible = true
 )
 @SimpleObject(external = true)
+@UsesPermissions(permissionNames = "android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE")
 public class MyAds extends AndroidNonvisibleComponent {
 
     private Context context;

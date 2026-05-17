@@ -4,5 +4,8 @@ version: "1.0"
 authors:
   - Bosku
 
+# Tambahkan ini biar mesinnya nggak ngambek
+assets: ""
+
 deps:
   - 'com.unity3d.ads:unity-ads:4.11.0'

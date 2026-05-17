@@ -1,12 +1,8 @@
 name: UnityAdsBos
 description: Ekstensi Unity Ads Interstitial Anti Bentrok.
 version: "1.0"
-author: Bosku
+authors:
+  - Bosku
 
 deps:
   - 'com.unity3d.ads:unity-ads:4.11.0'
-
-android:
-  permissions:
-    - android.permission.INTERNET
-    - android.permission.ACCESS_NETWORK_STATE

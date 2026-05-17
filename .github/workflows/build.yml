@@ -10,24 +10,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '11'
 
       - name: Install Rush CLI
         run: |
-          curl -s https://raw.githubusercontent.com/ShreyashSaitwal/rush-cli/main/scripts/install/install.sh | bash
+          curl -fsSL https://raw.githubusercontent.com/shreyashsaitwal/rush-cli/main/scripts/install/install.sh | bash
           echo "$HOME/.local/share/rush/bin" >> $GITHUB_PATH
+          echo "$HOME/.rush/bin" >> $GITHUB_PATH
+
+      - name: Cek Instalasi Mesin
+        run: rush -v
 
       - name: Build Extension
         run: rush build
 
       - name: Upload AIX
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AIX-Result
           path: out/*.aix

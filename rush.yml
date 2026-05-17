@@ -1,9 +1,10 @@
-name: UnityAdsBos
-description: Ekstensi Unity Ads Interstitial Anti Bentrok.
+name: "UnityAdsBos"
+description: "Ekstensi Unity Ads Interstitial Anti Bentrok"
+authors:
+  - "Bosku"
 version:
   name: "1.0"
-authors:
-  - Bosku
-assets: []
+build:
+  desugar_java_8_libs: false
 deps:
-  - 'com.unity3d.ads:unity-ads:4.11.0'
+  - "com.unity3d.ads:unity-ads:4.11.0"

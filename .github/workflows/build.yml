@@ -1,1 +1,33 @@
+name: Build AIX Extension
 
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+
+      - name: Install Rush CLI
+        run: |
+          curl -s https://raw.githubusercontent.com/ShreyashSaitwal/rush-cli/main/scripts/install/install.sh | bash
+          echo "$HOME/.local/share/rush/bin" >> $GITHUB_PATH
+
+      - name: Build Extension
+        run: rush build
+
+      - name: Upload AIX
+        uses: actions/upload-artifact@v3
+        with:
+          name: AIX-Result
+          path: out/*.aix

@@ -1,8 +1,10 @@
-name: "StartIoBos"
-description: "Ekstensi Start.io Interstitial Anti Bentrok"
+name: StartIoBos
+description: Ekstensi Start.io Interstitial Anti Bentrok
 authors:
-  - "Bosku"
+  - Bosku
 version:
   name: "1.0"
+  code: 1
+assets: []
 deps:
-  - "com.startapp:inapp-sdk:4.10.12"
+  - 'com.startapp:inapp-sdk:4.10.12'

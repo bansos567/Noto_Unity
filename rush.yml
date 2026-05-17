@@ -4,3 +4,5 @@ authors:
   - "Bosku"
 version:
   name: "1.0"
+deps:
+  - "com.startapp:inapp-sdk:4.10.12"

@@ -1,11 +1,9 @@
 name: UnityAdsBos
 description: Ekstensi Unity Ads Interstitial Anti Bentrok.
-version: "1.0"
+version:
+  name: "1.0"
 authors:
   - Bosku
-
-# Tambahkan ini biar mesinnya nggak ngambek
-assets: ""
-
+assets: []
 deps:
   - 'com.unity3d.ads:unity-ads:4.11.0'
